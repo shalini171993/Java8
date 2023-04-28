@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - DD
-
 jobs:
   e2e_testing:
     runs-on: ubuntu-latest
