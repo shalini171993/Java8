@@ -1,4 +1,9 @@
 name: Run Synthetic tests using public IDs of tests
+on:
+  push:
+    branches:
+      - DD
+
 jobs:
   e2e_testing:
     runs-on: ubuntu-latest
@@ -8,4 +13,5 @@ jobs:
         with:
           api_key: ${{secrets.DD_API_KEY}}
           app_key: ${{secrets.DD_APP_KEY}}
-          public_ids: 'abc-d3f-ghi, jkl-mn0-pqr'
+          test_search_query: 'tag:shalini'
+          datadog_site: "datadoghq.eu"
